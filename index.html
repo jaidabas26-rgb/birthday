@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Dizzii</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Welcome screen -->
+  <div id="welcomeScreen" class="screen">
+    <div class="welcome-overlay"></div>
+    <div class="welcome-content" aria-live="polite">
+      <div class="floating-sparkles" aria-hidden="true"></div>
+      <h1 class="welcome-title">Happy Birthday Dizzii <span aria-hidden="true">❤️</span></h1>
+      <p class="welcome-subtitle">From Zoyi</p>
+      <button id="enterButton" class="primary-btn" type="button">Enter the Surprise</button>
+    </div>
+    <div class="floating-hearts" aria-hidden="true"></div>
+  </div>
+
+  <!-- Main content -->
+  <main id="mainContent" class="hidden" role="main">
+    <header class="page-header">
+      <h1 class="page-title">For Dizzii, with all my heart</h1>
+      <p class="page-intro">A quiet, glowing space made just for you.</p>
+    </header>
+
+    <section id="gallerySection" class="section">
+      <h2 class="section-title">Memories & Moments</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/img1.jpeg" alt="Special memory 1" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/img2.jpeg" alt="Special memory 2" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/img3.jpeg" alt="Special memory 3" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="flashSection" class="section">
+      <h2 class="section-title">Memory Flash</h2>
+      <div class="flash-grid">
+        <div class="flash-card">
+          <img src="images/img5.jpeg" alt="Memory moment" />
+          <p class="flash-text">“This moment &gt;&gt;&gt; everything”</p>
+        </div>
+        <div class="flash-card">
+          <img src="images/img6.jpeg" alt="Memory moment" />
+          <p class="flash-text">“I wish I could relive this day with you again”</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="messageSection" class="section">
+      <h2 class="section-title">A Heartfelt Note</h2>
+      <div class="message-card" role="region" aria-label="Emotional message">
+        <div class="message-inner">
+          <h3 class="message-heading">For you, my love</h3>
+          <p class="message-body">
+            Hey love 🤍
+          </p>
+          <p class="message-body">
+            I know your birthday can feel heavy, full of memories you didn’t choose to carry. Today, I want you to know that this day is a gift — because it brought you into a world that is brighter with you in it.
+          </p>
+          <p class="message-body">
+            Before we met, birthdays might have felt lonely or like another weight. But now, from the moment our paths crossed, you have never had to hold it all alone again.
+          </p>
+          <p class="message-body">
+            From here on, every birthday is going to feel warmer, kinder, and softer. Not because the world changed, but because you have someone who chooses you, cares for you, and wants to see your smile more than anything.
+          </p>
+          <p class="message-body">
+            Your future birthdays will be some of the sweetest days of your life — filled with laughter, surprises, gentle moments, and love you deserve.
+          </p>
+          <p class="message-body">
+            I promise to do everything I can to make you feel that way every year. You are stronger than you know, more beautiful than you believe, and more loved than you could ever imagine.
+          </p>
+          <p class="message-body">
+            Today is not just another birthday — it’s a reminder that someone incredible came into this world. And I’m so lucky to share it with you.
+          </p>
+          <p class="message-body message-signature">
+            — Zoyi
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reasonsSection" class="section">
+      <h2 class="section-title">A little gift for you</h2>
+      <button id="openGiftButton" class="secondary-btn" type="button">Open your gift 🎁</button>
+    </section>
+
+    <section id="surpriseSection" class="section">
+      <h2 class="section-title">Surprise Experience</h2>
+      <button id="surpriseButton" class="secondary-btn" type="button">Click for a Surprise ❤️</button>
+    </section>
+
+    <section id="heartSection" class="section">
+      <h2 class="section-title">Love Button</h2>
+      <button id="heartButton" class="heart-btn" type="button">Press if you love me 😏</button>
+      <p id="heartMessage" class="heart-message" aria-live="polite"></p>
+    </section>
+
+    <section id="secretSection" class="section">
+      <h2 class="section-title">A Little Secret</h2>
+      <div class="secret-card">
+        <label for="secretInput" class="secret-label">Enter the password:</label>
+        <div class="secret-input-group">
+          <input id="secretInput" class="secret-input" type="text" autocomplete="off" placeholder="Type the secret..." />
+          <button id="secretButton" class="secondary-btn" type="button">Unlock</button>
+        </div>
+        <p id="secretMessage" class="secret-message" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <p>Made with love 💖</p>
+      <p class="small-text">Tip: If something feels stuck, refresh and start again.</p>
+    </footer>
+  </main>
+
+  <!-- Music control -->
+  <button id="musicToggle" class="music-toggle" type="button" aria-label="Toggle music">
+    <span class="music-icon" aria-hidden="true">🎵</span>
+  </button>
+
+  <!-- Popups -->
+  <div id="reasonsPopup" class="popup hidden" role="dialog" aria-modal="true" aria-labelledby="reasonsPopupTitle">
+    <div class="popup-shell" tabindex="-1">
+      <button id="closeReasonsPopup" class="popup-close" type="button" aria-label="Close">✕</button>
+      <h3 id="reasonsPopupTitle" class="popup-title">Reasons I love you</h3>
+      <div class="popup-body">
+        <p id="typingLine" class="typing-line"></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="surprisePopup" class="popup hidden" role="dialog" aria-modal="true" aria-labelledby="surprisePopupTitle">
+    <div class="popup-shell" tabindex="-1">
+      <button id="closeSurprisePopup" class="popup-close" type="button" aria-label="Close">✕</button>
+      <h3 id="surprisePopupTitle" class="popup-title">A little surprise</h3>
+      <div class="popup-body">
+        <p class="popup-text">You are my favorite person in this world, Dizzii. I’m so lucky to have you ❤️</p>
+      </div>
+    </div>
+  </div>
+
+  <audio id="backgroundMusic" preload="auto" loop>
+    <source src="audio/birthday_bgm.mp3" type="audio/mpeg" />
+    <source src="audio/birthday_bgm.ogg" type="audio/ogg" />
+    <!-- Add a local audio file at audio/birthday_bgm.mp3 for the best experience -->
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
